@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Valley Sound Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -25,11 +25,8 @@
             width: 100%;
         }
 
-        .overlay {
-            clip-path: polygon(3% -10%, -8% 11%, 107% 143%, 111% 70%);
-            position: absolute;
-            top: 0;
-            opacity: 0.8;
+        .logo_vid{
+            width:100%;
         }
 
         .container {
@@ -38,8 +35,15 @@
             flex-direction: row;
             gap: 6rem;
             max-width: 60%;
-            margin: 200px auto;
+            margin: 0 auto 200px;
             z-index: 10;
+        }
+
+        .container-mid {
+            gap: 0;
+            margin: -55px auto 200px;
+            max-width: 60%;
+            text-align: center;
         }
 
         .first {
@@ -53,8 +57,6 @@
         }
 
         video {
-            width: 1024px;
-            min-height: 500px;
             margin-bottom: 200px;
         }
 
@@ -63,12 +65,13 @@
         }
 
         .footer {
-            margin-top: 20px;
+            margin: -100px auto 200px;
             height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            gap: 50px;
         }
 
         .icon {
@@ -87,21 +90,12 @@
             font-weight: 300;
             font-style: normal;
         }
-
-        .roboto-regular {
-            font-family: "Roboto", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .roboto-medium {
-            font-family: "Roboto", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-        }
-
         p {
             font-size:24px;
+        }
+
+        h2 {
+            font-size:48px;
         }
 
         @media (max-width: 1500px) {
@@ -117,13 +111,28 @@
                 gap: 0; /* Add spacing between columns */
             }
 
-            video {
-                width: 85%;
-                min-height: 200px;
-                margin-bottom: 50px;
-            }
             p {
                 font-size:16px;
+            }
+
+            h2 {
+                font-size:24px;
+            }
+
+            video {
+                margin-bottom: 0;
+            }
+
+            .footer {
+                margin: 0 auto 100px;
+                gap: 30px;
+            }
+
+            .container-mid {
+                gap: 0;
+                margin: 0px auto 200px;
+                max-width: 60%;
+                text-align: center;
             }
         }
 
@@ -131,32 +140,39 @@
     </style>
 </head>
 <body>
-    <img src="logo.jpg" alt="Your Logo">
-    <img class="overlay" src="logo.jpg" alt="Your Logo">
+    
+
+    <video src="tiny_logo.mp4" class="logo_vid" autoplay loop muted></video>
+    
     <div class="container">
         <div class="text-column first">
-            <p class="roboto-regular ">Discover our world-class recording facilities tucked away among the rolling hills and valleys of the Swedish heartlands.</p>
-            <p class="roboto-regular ">Owned by Borlänge Municipality and operated by the non-profit Teknikeralliansen, our studio offers a diverse range of technical and creative expertise to elevate your production. From music production to video post-production, voice overs, and game audio - our talented team is ready to bring your vision to life.</p>
+            <p class="roboto-light ">Discover our world-class recording facilities tucked away among the rolling hills and valleys of the Swedish heartlands.</p>
+            <p class="roboto-light ">Owned by Borlänge Municipality and operated by the non-profit Teknikeralliansen, our studio offers a diverse range of technical and creative expertise to elevate your production. From music production to video post-production, voice overs, and game audio - our talented team is ready to bring your vision to life.</p>
         </div>
         <div class="text-column">
-            <p class="roboto-regular ">The studio features a well equipped control room with multiple monitoring solutions and high-end outboard gear. The performance area consists of a main room, big enough to host a full band, and multiple smaller rooms when separation and different sonic qualities are key.</p>
-            <p class="roboto-regular ">Experience the studio tour! [VIDEO]</p>
+            <p class="roboto-light ">The studio features a well equipped control room with multiple monitoring solutions and high-end outboard gear. The performance area consists of a main room, big enough to host a full band, and multiple smaller rooms when separation and different sonic qualities are key.</p>
+            <p class="roboto-light ">If you'd want to book the studio, please send us an <a href="mailto:teknikeralliansen@gmail.com">email</a> and we will get back to you with the details we need.</p>
         </div>
     </div>
-    <video src="MVI_1323.MP4" controls></video>
-    <!--<iframe width="1024" height="680" src="https://www.youtube.com/embed/DrTmkLfHZE4?si=mdw1UtP0e_DpAPUh&amp;start=34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-    <br />
-    <!--<div class="content">
-        <p class="roboto-regular ">Välkommen till vår musikstudio i världsklass! Låt Dalarnas böljande landskap locka fram lugnet och kreativiteten och ta ditt skapande till nästa nivå hos oss.</p>
-        <p class="roboto-regular ">Studion tillhör Borlänge Kommun och drivs av den ideella föreningen Teknikeralliansen. Tillsammans kan vi erbjuda ett brett spektra av teknisk och kreativ expertis för att förhöja dina prouktioner. Våra medlemmar är verksamma inom allt från musikproduktion till ljud för spel och film.</p>
-        <p class="roboto-regular ">Hjärtat i studion är kontrollrummet som är utrustat med flera uppsättningar monitorer och rackmeter med legendarisk analog utrustning. Det stora inspelningsrummet huserar ett helt band utan problem, och det finns ett flertal mindre rum när inspelningen kräver större kontroll över separation och akustik.</p>
-        <p class="roboto-regular ">Följ med på en rundtur! [VIDEO]</p>
-    </div>-->
+
     <div class="footer">
         <a href="https://www.instagram.com/valleysoundstudio_borlange/"><img class="icon" src="instagram.png" alt="Icon 1"></a>
         <a href="https://www.facebook.com/teknikeralliansendalarna"><img class="icon" src="facebook.png" alt="Icon 2"></a>
         <a href="mailto:teknikeralliansen@gmail.com"><img class="icon" src="envelope.png" alt="Icon 3"></a>
     </div>
+
+    <div class="container-mid">
+        <p class="roboto-light">If you're a local engineer and would like to join Teknikeralliansen, please write us an <a href="mailto:teknikeralliansen@gmail.com">email!</a></p>
+    </div>
+    
+
+    <!--<div class="content">
+        <p class="roboto-regular ">Välkommen till vår musikstudio i världsklass! Låt Dalarnas böljande landskap locka fram lugnet och kreativiteten och ta ditt skapande till nästa nivå hos oss.</p>
+        <p class="roboto-regular ">Studion tillhör Borlänge Kommun och drivs av den ideella föreningen Teknikeralliansen. Tillsammans kan vi erbjuda ett brett spektra av teknisk och kreativ expertis för att förhöja dina prouktioner. Våra medlemmar är verksamma inom allt från musikproduktion till ljud för spel och film.</p>
+        <p class="roboto-regular ">Hjärtat i studion är kontrollrummet som är utrustat med flera uppsättningar monitorer och rackmeter med legendarisk analog utrustning. Det stora inspelningsrummet huserar ett helt band utan problem, och det finns ett flertal mindre rum när inspelningen kräver större kontroll över separation och akustik.</p>
+        <p class="roboto-regular ">För att boka studion, kontakta oss genom <a href="mailto:teknikeralliansen@gmail.com">epost</a>, så återkommer vi med de detaljer vi behöver!</p>
+    </div>-->
+    
 </body>
 </html>
 
